@@ -26,4 +26,4 @@
       chdir: /opt/docker/Soufiane
       
   - name: run container
-    command: docker run -d --name simple-devops-container -p 8081:8080 simple-devops-image:latest
+    command: docker run -d --name simple-devops-container -p 8081:8080 simple-devops-container:latest
