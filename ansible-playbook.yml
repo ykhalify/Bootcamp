@@ -1,6 +1,7 @@
 ---
 - hosts: all
   become: true #need to add this
+  ansible_sudo_pass: "{{ ansible_ssh_pass }}"
        
   tasks:
   - name: copy war
