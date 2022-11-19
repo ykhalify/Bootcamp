@@ -1,8 +1,8 @@
 ---
 - hosts: all
   become: true
-  #vars:
-    #ansible_host_key_checking: false
+  vars:
+    ansible_become_pass: "{{ ansible_pass }}"
        
   tasks:
   - name: copy war
