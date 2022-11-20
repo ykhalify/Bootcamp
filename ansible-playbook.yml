@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: true #need to add this
+  become: true
   vars:
     ansible_sudo_pass: "{{ ansible_ssh_pass }}"
        
