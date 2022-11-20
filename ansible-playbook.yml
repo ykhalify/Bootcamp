@@ -11,21 +11,21 @@
       dest: /opt/docker/Soufiane
       
   - name: Stop current container
-    command: docker stop simple-devops-container
+    command: docker stop bootcamp-container-ansible
     ignore_errors: yes
     
   - name: remove stopped container
-    command: docker rm simple-devops-container
+    command: docker rm bootcamp-container-ansible
     ignore_errors: yes
     
-  - name: remover docker images # Clean up task
-    command: docker rmi simple-devops-container:latest
-    ignore_errors: yes # May not find image if first run
+  # - name: remover docker images # Clean up task
+  #   command: docker rmi simple-devops-container:latest
+  #   ignore_errors: yes # May not find image if first run
     
   - name: create docker image using war file
-    command: docker build -t simple-devops-container:latest .
+    command: docker build -t bootcamp-container-ansible .
     args:
       chdir: /opt/docker/Soufiane
       
   - name: run container
-    command: docker run -d --name simple-devops-container -p 8081:8080 simple-devops-container:latest
+    command: docker run -d --name bootcamp-container-ansible -p 8082:8080 bootcamp-container-ansible
