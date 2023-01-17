@@ -21,10 +21,10 @@
       command: docker rmi simple-devops-image:latest
       ignore_errors: yes # May not find image if first run
 
-     - name: create docker image using war file
+    - name: create docker image using war file
       command: docker build -t simple-devops-image:latest .
       args:
         chdir: /opt/docker/yassine
-        
-     - name: run container
+
+    - name: run container
       command: docker run -d --name yassine-devops-container -p 8081:8080 simple-devops-image:latest
