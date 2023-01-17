@@ -6,7 +6,7 @@
     tasks:
     - name: copy war
       copy:
-        src: /var/lib/jenkins/workspace/Yassine-Deploy_On_Container/webapp/target/webapp.war
+        src: /var/lib/jenkins/workspace/Yassine-Deploy_on_Container/webapp/target/webapp.war
         dest: /opt/docker/yassine
 
     - name: Stop current container
